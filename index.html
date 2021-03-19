@@ -12,7 +12,9 @@
 
 <body>
     <div class="container">
-        <div class="weather-app">
+        <div class="weather-app-wrapper"></div>
+         <div class="weather-app">
+             <div class="overview">
         <h1>
             Buffalo
         </h1>
@@ -26,8 +28,13 @@
         </ul>
         <div class="row">
             <div class="col-6">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Sunny">
+                <div class="clearfix">
+                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Sunny" class="float-start">
+                <div class="float-start">
                 20℉ | ℃
+                </div>
+                </div>
+            </div>
             </div>
             <div class="col-6">
                 <ul>
@@ -43,10 +50,11 @@
                 </ul>
             </div>
         </div>
-            <small>
-                <a href="https://github.com/ebuchanan9/Vanilla-Weather-App" target="_blank">Open-Sourced</a> Code by Erin Buchanan
-            </small>
         </div>
+        </div>
+             <small>
+                <a href="https://github.com/ebuchanan9/Vanilla-Weather-App" target="_blank">Open-Sourced</a> Code by Erin Buchanan
+                </small>
      </div>
     <script src="src/app.js"></script>
 </body>

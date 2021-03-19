@@ -26,48 +26,46 @@
                         </div>
                     </div>
                 </form>
-            <div class="overview">
-        <h1>
-            Buffalo
-        </h1>
-        <ul>
-            <li>
-                Friday 05:00
-            </li>
-            <li>
-                Clear
-            </li>
-        </ul>
+        <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+             <li>
+                Last updated: <span id="date"></span>
+                </li>
+                <li id="description">
+                </li>
+            </ul>
+        </div>
         <div class="row">
             <div class="col-6">
-                <div class="clearfix">
+                <div class="clearfix weather-temperature">
                 <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Sunny" class="float-start">
                 <div class="float-start">
-                20℉ | ℃
+                <strong id="temperature">20</strong>
+                    <span class = "units">
+                        <a href="#" id="celsius-link" class = "active">℉</a> | 
+                        <a href ="#" id ="fahrenheit-link">℃</a>
+                    </span>
                 </div>
-                </div>
-            </div>
-            </div>
+             </div>
+        </div>
             <div class="col-6">
                 <ul>
                     <li>
-                        Precipitation: 0%
+                        Humidity: <span id ="humidity"></span>%
                     </li>
                     <li>
-                        Humidity: 73%
-                    </li>
-                    <li>
-                        Wind: 2 mph
+                        Wind: <span id="wind"></span>mph
                     </li>
                 </ul>
             </div>
         </div>
-        </div>
-        </div>
+        <div class = "row weather-forecast" id="forecast"></div>
         </div>
              <small>
-                <a href="https://github.com/ebuchanan9/Vanilla-Weather-App" target="_blank">Open-Sourced</a> Code by Erin Buchanan
+                <a href="https://github.com/ebuchanan9/Vanilla-Weather-App" target="_blank">Open-Source Code</a> by Erin Buchanan
                 </small>
+        </div>
      </div>
     <script src="src/app.js"></script>
 </body>

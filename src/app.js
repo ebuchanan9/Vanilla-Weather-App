@@ -1,5 +1,4 @@
-  
-function formatDate(timestamp) {
+  function formatDate(timestamp) {
   let date = new Date(timestamp);
 
   let days = [
@@ -49,13 +48,20 @@ function displayTemperature(response){
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-    console.log(response.data);
 }
 
-let apiKey ="00ccd60e50147aa10fe0e380d859f398";
-let city = `London`;
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+function searchCity(city) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input").value;
+  searchCity(city);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
